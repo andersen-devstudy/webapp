@@ -33,6 +33,7 @@ services:
     container_name: db-compose
     ports:
       - "5432:5432"
+    privileged: true
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
