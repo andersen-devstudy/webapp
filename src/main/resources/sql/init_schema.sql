@@ -1,4 +1,4 @@
-drop table if exists groups;
+drop table if exists users;
 
 create table users
 (
