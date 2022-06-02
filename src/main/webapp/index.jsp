@@ -3,9 +3,9 @@
 <html>
 <head>
     <title>testing new Jsp</title>
-    <title>some awesome comment from awesome Jenkins</title>
 </head>
 <body>
+<h1>some awesome comment from awesome Jenkins</h1>
 <%
     for(int i = 0; i < 3; i++)
         out.println("hello from servlet");
