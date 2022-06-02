@@ -6,8 +6,8 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public abstract class AbstractCrudDao<T extends Entity<K>, K> implements CrudDao<T, K> {
-  @Override
 
+  @Override
   public T save(Connection connection, T entity) throws SQLException {
     return entity.getId() == null ? create(connection, entity) : update(connection, entity);
   }
