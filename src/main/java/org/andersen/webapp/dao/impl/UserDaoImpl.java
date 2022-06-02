@@ -29,7 +29,7 @@ public class UserDaoImpl extends AbstractCrudDao<User, Long> implements UserDao 
   private final UserMapper mapper;
 
   @Override
-  protected User create(Connection connection, User entity) throws SQLException {
+  public User create(Connection connection, User entity) throws SQLException {
     try (PreparedStatement ps = connection.prepareStatement(INSERT_ONE, Statement.RETURN_GENERATED_KEYS)) {
       ps.setString(1, entity.getName());
       ps.setString(2, entity.getSurname());
