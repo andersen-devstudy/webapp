@@ -25,6 +25,8 @@ services:
     ports:
       - 8083:8080
       - 50003:50000
+    depends_on:
+      - tomcat
     networks:
       - an
 
