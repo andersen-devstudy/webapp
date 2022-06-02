@@ -3,6 +3,7 @@ package org.andersen.webapp.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
+import org.andersen.webapp.dao.datasource.Datasource;
 import org.andersen.webapp.dao.datasource.SimpleDatasource;
 import org.andersen.webapp.dao.impl.UserDaoImpl;
 import org.andersen.webapp.model.User;
@@ -17,7 +18,7 @@ import static org.andersen.webapp.utils.TransactionUtils.transaction;
 public class StudentService {
 
   private final UserDaoImpl userDao;
-  private final SimpleDatasource datasource;
+  private final Datasource datasource;
 
   public User save(User user) {
     try {
