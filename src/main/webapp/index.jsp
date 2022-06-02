@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>testing new Jsp</title>
+    <title>some awesome comment from awesome Jenkins</title>
 </head>
 <body>
 <%
