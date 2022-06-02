@@ -24,7 +24,7 @@ public class MainServlet extends HttpServlet {
         // Hello
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        out.println("<h1>" + "hello from Alex" + "</h1>");
+        out.println("<h1>" + "here need to be list of students" + "</h1>");
         out.println("</body></html>");
     }
 
