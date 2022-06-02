@@ -3,10 +3,12 @@ package org.andersen.webapp.service;
 import lombok.RequiredArgsConstructor;
 import org.andersen.webapp.dao.datasource.Datasource;
 import org.andersen.webapp.dao.impl.UserDaoImpl;
+import org.andersen.webapp.exception.UserServiceException;
 import org.andersen.webapp.model.User;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Optional;
 
 @RequiredArgsConstructor
 public class StudentService {
@@ -14,20 +16,21 @@ public class StudentService {
   private final UserDaoImpl userDao;
   private final Datasource datasource;
 
-  public User save(User user) {
+  public User save(User user) throws UserServiceException {
+    User savedUser;
     try {
-      return userDao.save(datasource.getConnection(), user);
+      savedUser = userDao.save(datasource.getConnection(), user);
     } catch (SQLException e) {
-      e.printStackTrace();
-      return null;
+      throw new UserServiceException("User wasn't save", e);
     }
+    return savedUser;
   }
 
-  public void delete(Long id) {
+  public void delete(Long id) throws UserServiceException {
     try {
       userDao.deleteById(datasource.getConnection(), id);
     } catch (SQLException e) {
-      e.printStackTrace();
+      throw new UserServiceException("User wasn't delete", e);
     }
   }
 
