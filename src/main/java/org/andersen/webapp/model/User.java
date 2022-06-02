@@ -16,8 +16,8 @@ public class User extends LongEntity {
   public static final String USER_SURNAME = "user_surname";
   public static final String USER_AGE = "user_age";
 
-  private Long id;
-  private String name;
-  private String surname;
-  private Integer age;
+  private final Long id;
+  private final String name;
+  private final String surname;
+  private final Integer age;
 }

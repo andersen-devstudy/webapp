@@ -1,6 +1,5 @@
 package org.andersen.webapp.dao.impl;
 
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.andersen.webapp.dao.AbstractCrudDao;
 import org.andersen.webapp.dao.UserDao;
