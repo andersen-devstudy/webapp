@@ -1,6 +1,7 @@
 package org.andersen.webapp.dao.impl;
 
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.andersen.webapp.dao.AbstractCrudDao;
 import org.andersen.webapp.dao.UserDao;
 import org.andersen.webapp.dao.mappers.UserMapper;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class UserDaoImpl extends AbstractCrudDao<User, Long> implements UserDao {
 
   public static final String SELECT_ONE = "SELECT * FROM users where user_id = ?";
