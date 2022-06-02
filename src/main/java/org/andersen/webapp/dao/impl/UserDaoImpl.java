@@ -21,15 +21,15 @@ public class UserDaoImpl extends AbstractCrudDao<User, Long> implements UserDao 
   public static final String SELECT_ONE = "SELECT * FROM users where user_id = ?";
   public static final String SELECT_ALL = "SELECT * FROM users";
   public static final String INSERT_ONE = "INSERT INTO users (user_name, user_surname, user_age) values (?,?,?)";
-  public static final String UPDATE = "UPDATE users SET user_name = ?, user_surname = ?, user_age = ? where user_id = ?";
+  public static final String UPDATE =
+      "UPDATE users SET user_name = ?, user_surname = ?, user_age = ? where user_id = ?";
   public static final String DELETE_ONE = "DELETE FROM users WHERE user_id = ?";
 
   private final UserMapper mapper;
 
   @Override
   protected User create(Connection connection, User entity) throws SQLException {
-    try (PreparedStatement ps = connection
-        .prepareStatement(INSERT_ONE, Statement.RETURN_GENERATED_KEYS)) {
+    try (PreparedStatement ps = connection.prepareStatement(INSERT_ONE, Statement.RETURN_GENERATED_KEYS)) {
       ps.setString(1, entity.getName());
       ps.setString(2, entity.getSurname());
       ps.setInt(3, entity.getAge());
