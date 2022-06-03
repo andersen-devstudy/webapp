@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class SimpleDatasource implements Datasource {
 
   public final static String DRIVER_CLASS = "org.postgresql.Driver";
-  public final static String JDBC_URL = "jdbc:postgresql://localhost:5432/webapp";
+  public final static String JDBC_URL = "jdbc:postgresql://localhost:5432/postgres";
   public final static String USERNAME = "postgres";
   public final static String PASSWORD = "postgres";
 
