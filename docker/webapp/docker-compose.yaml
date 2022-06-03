@@ -9,13 +9,12 @@ services:
     container_name: tomcat-compose
     privileged: true
     ports:
-      - 8085:8080
+      - "8085:8080"
     restart: on-failure
     depends_on:
       - db
     networks:
       - an
-
 
   jenkins:
     image: jenkins/jenkins:lts
@@ -23,8 +22,8 @@ services:
     privileged: true
     user: root
     ports:
-      - 8083:8080
-      - 50003:50000
+      - "8083:8080"
+      - "50003:50000"
     depends_on:
       - tomcat
     networks:
