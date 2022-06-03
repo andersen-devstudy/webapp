@@ -13,7 +13,7 @@ import static org.andersen.webapp.model.User.USER_SURNAME;
 public class UserMapper implements Mapper<User> {
 
   @Override
-  public User apply(ResultSet rs) throws SQLException {
-    return new User(rs.getLong(USER_ID), rs.getString(USER_NAME), rs.getString(USER_SURNAME), rs.getInt(USER_AGE));
+  public User apply(ResultSet resultSet) throws SQLException {
+    return new User(resultSet.getLong(USER_ID), resultSet.getString(USER_NAME), resultSet.getString(USER_SURNAME), resultSet.getInt(USER_AGE));
   }
 }

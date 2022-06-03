@@ -26,13 +26,15 @@ public class MainServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
+        String command = request.getParameter("command");
 
         // Hello
+//        response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        out.println("<h1>" + "here need to be list of students" + "</h1>");
+        out.println("<h1> Hello " + command +  "</h1>");
         out.println("</body></html>");
+        if(command.equals("add")) response.sendRedirect("/webapp_war_exploded/adding");
     }
 
     public void destroy() {
