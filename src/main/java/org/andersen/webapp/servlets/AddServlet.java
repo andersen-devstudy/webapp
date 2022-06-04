@@ -8,8 +8,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 
-@WebServlet(name = "addingServlet", value = "/adding")
-public class AddingServlet extends HttpServlet {
+@WebServlet(name = "addServlet", value = "/adding")
+public class AddServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
