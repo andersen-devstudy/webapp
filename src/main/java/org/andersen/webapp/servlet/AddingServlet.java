@@ -1,4 +1,4 @@
-package org.andersen.webapp.servlets;
+package org.andersen.webapp.servlet;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

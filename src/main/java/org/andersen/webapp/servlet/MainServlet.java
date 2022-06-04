@@ -1,4 +1,4 @@
-package org.andersen.webapp.servlets;
+package org.andersen.webapp.servlet;
 
 
 import org.andersen.webapp.dao.datasource.SimpleDatasource;
