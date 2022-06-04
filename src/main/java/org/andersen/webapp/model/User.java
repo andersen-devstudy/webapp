@@ -1,13 +1,11 @@
 package org.andersen.webapp.model;
 
-import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 public class User extends LongEntity {
 
@@ -16,8 +14,23 @@ public class User extends LongEntity {
   public static final String USER_SURNAME = "user_surname";
   public static final String USER_AGE = "user_age";
 
-  private final Long id;
-  private final String name;
-  private final String surname;
-  private final Integer age;
+  private String name;
+  private String surname;
+  private Integer age;
+
+  public User(Long id, String name, String surname, Integer age) {
+    super(id);
+    this.name = name;
+    this.surname = surname;
+    this.age = age;
+  }
+
+  public User(String name, String surname, Integer age) {
+    this(null, name, surname, age);
+  }
+
+  @Override
+  public String toString() {
+    return "User{" + "id=" + id + ", name='" + name + '\'' + ", surname='" + surname + '\'' + ", age=" + age + '}';
+  }
 }
