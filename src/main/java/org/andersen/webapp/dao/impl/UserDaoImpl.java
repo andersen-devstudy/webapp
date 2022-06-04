@@ -52,7 +52,7 @@ public class UserDaoImpl extends AbstractCrudDao<User, Long> implements UserDao 
       ps.setString(1, entity.getName());
       ps.setString(2, entity.getSurname());
       ps.setInt(3, entity.getAge());
-      ps.setLong(1, entity.getId());
+      ps.setLong(4, entity.getId());
       if (ps.executeUpdate() != 1) {
         throw new SQLException("Unable to update user " + entity);
       }
