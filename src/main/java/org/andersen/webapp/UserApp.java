@@ -21,8 +21,9 @@ public class UserApp {
     service.save(new User("name3","surname", 11));
     service.save(new User("name4","surname", 11));
     service.save(new User("name5","surname", 11));
-    service.delete(4L);
+//    service.delete(4L);
     System.out.println(service.find(3L));
+    System.out.println("-----------");
     service.findAll()
         .forEach(System.out::println);
   }
