@@ -1,3 +1,4 @@
+package org.andersen.webapp.servlet;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,7 +10,7 @@ import java.io.PrintWriter;
 
 
 
-@WebServlet(name = "addingServlet", value = "/adding")
+@WebServlet(name = "addServlet", value = "/adding")
 public class AddServlet extends HttpServlet {
 
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
